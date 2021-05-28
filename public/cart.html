@@ -13,10 +13,50 @@
 </head>
 
 <body>
+    <!-- --------------------------sidebar----------------------- -->
+
+    <!-- <div class="sidebar-open bar">
+        <span class="fas fa-bars" onclick="openbar()"></span>
+    </div> -->
+
+    <div class="sidebar-sidebar bar" id="sidebar">
+        <div class="sidebar-close">
+            <span class="fas fa-times" onclick="closebar()"></span>
+        </div>
+
+        <div class="sidebar-title">
+            Menu
+        </div>
+
+        <ul class="sidebar-links">
+            <li><a href="./../index.html"><i class="fas fa-home"> Home</i></a></li>
+            <li><a href="./products.html"><i class="fas fa-qrcode"> Products</i></a></li>
+            <li><a href=""><i class="fas fa-user"> Login</i></a></li>
+            <li><a href=""><i class="fas fa-bell"> Notification</i></a></li>
+            <li><a href=""><i class="fas fa-envelope"> Contact Us</i></a></li>
+            <li><a href=""><i class="fas fa-power-off"> Logout</i></a></li>
+        </ul>
+
+        <div class="sidebar-social">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+
+    </div>
+
     <!-- LANDING PAGE -->
     <div class="container">
         <!-- navbar -->
         <div class="navbar">
+            <div class="navbar">
+                <div class="menu-icon" onclick="openbar()">
+                    <!-- <i class="fa fa-bars"></i> -->
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
             <div class="logo">
                 <a href="./../index.html">
                     <h3>Sheffy<span>Store</span></h3>
@@ -30,7 +70,6 @@
                 </ul>
             </nav>
             <i class="fas fa-shopping-cart"></i>
-            <img src="./../assets/images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
         <!-- /navbar -->
 
@@ -153,7 +192,7 @@
     </div>
 
     <!-- -----------------------js for toggle menu----------------------->
-    <script>
+    <!-- <script>
         var MenuItems = document.getElementById("MenuItems");
         MenuItems.style.maxHeight = "0px"
         function menutoggle() {
@@ -164,9 +203,9 @@
                 MenuItems.style.maxHeight = "0px";
             }
         }
-    </script>
+    </script> -->
 
-
+    <script src="./../assets/sidebar.js"></script>
 </body>
 
 </html>
