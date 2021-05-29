@@ -60,9 +60,10 @@ p{
 }
 
 /* --------------------------sidebar---------------------------- */
-/* .sidebar-section{
-    position: relative;
-} */
+
+.logo-toggle{
+    display: flex;
+}
 
 .sidebar-content{
     position: absolute;
@@ -243,10 +244,6 @@ p{
 .btn:hover{
     background: #563434;
 }
-
-/* .header{
-    background: radial-gradient(#fff,#ffd6d6);
-} */
 
 .categories{
     margin: 70px 0;
@@ -472,6 +469,9 @@ ul{
     .menu-icon{
         display: block;
         cursor: pointer;
+    }
+    .logo-toggle .logo{
+        justify-content: flex-end;
     }
 }
 

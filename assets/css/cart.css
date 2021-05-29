@@ -11,7 +11,7 @@ body{
 .navbar{
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding-top: 20px;
 }
 
 nav{
@@ -40,9 +40,6 @@ p{
 
 
 /* --------------------------sidebar---------------------------- */
-/* .sidebar-section{
-    position: relative;
-} */
 
 .sidebar-content{
     position: absolute;
@@ -598,7 +595,6 @@ ul{
 
 .menu-icon{
     width: 28px;
-    margin-left: 20px;
     display: none;
 }
 
