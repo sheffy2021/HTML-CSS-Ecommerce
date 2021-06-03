@@ -8,10 +8,18 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ----------------------------------navbar------------------------------ */
+
 .navbar{
     display: flex;
+    width: 85%;
+    margin-top: 20px;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    /* padding: 20px; */
 }
 
 .logo h3 span{
@@ -37,6 +45,7 @@ nav ul li{
     margin-right: 20px;
 }
 
+
 .navbar i{
     color: #ff523b;
 }
@@ -49,6 +58,13 @@ a{
 p{
     color: #555;
 }
+
+.menu-icon{
+    width: 28px;
+    display: none;
+}
+/* ----------------------------------/navbar------------------------------ */
+
 
 /* --------------------------sidebar---------------------------- */
 
@@ -167,16 +183,16 @@ p{
 }
 
 
-.container{
-    max-width: 1300px;
-    margin: auto;
-    padding: 0px 25px;
+.row-text{
+    text-align: center;
+    margin-top: 40px;
 }
+
 .row{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .row-2{
@@ -211,25 +227,7 @@ select:focus{
 .col-4 img{
     width: 100%;
 }
-.title{
-    text-align: center;
-    margin: 0 auto 80px;
-    position: relative;
-    line-height: 60px;
-    color: #555;
-}
 
-.title::after{
-    content: "";
-    background: #ff523b;
-    width: 80px;
-    height: 5px;
-    position: absolute;
-    border-radius: 5px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 h4{
     color: #555;
@@ -249,25 +247,13 @@ h4{
 }
 
 .page-btn{
-    margin: 0 auto 80px;
-}
 
+    margin: 10px;
+}
 .page-btn span{
-    display: inline-block;
-    border: 1px solid #ff523b;
-    margin-left: 10px;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
+    border: 1px solid tomato;
+    padding: 2px 6px;
 }
-
-.page-btn span:hover{
-    background: #ff523b;
-    color: #fff;
-}
-
 
 /* ----------------footer---------------- */
 
@@ -275,68 +261,21 @@ h4{
     background: #000;
     color: #8a8a8a;
     font-size: 14px;
-    padding: 60px 0 20px;
+    padding: 60px 0 60px;
 }
 
-.footer p{
-    color: #8a8a8a;
+.footer-row{
+    display: flex;
+    justify-content: center;
 }
 
-.footer h3{
-    color: #fff;
-    margin-bottom: 20px;
+.footer-row .footer-col-1{
+    display: flex;
 }
 
-.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
-    min-width: 250px;
-    margin-bottom: 20px;
-}
-
-.footer-col-1{
-    flex-basis: 30%;
-}
-
-.footer-col-2{
-    flex: 1;
-    text-align: center;
-}
-
-.footer-col-2 img{
-    width: 180px;
-    margin-bottom: 20px;
-}
-
-.footer-col-3, .footer-col-4{
-    flex-basis: 12%;
-    text-align: center;
-}
-
-ul{
-    list-style-type: none;
-}
-
-.app-logo{
-    margin-top: 20px;
-}
-
-.app-logo img{
-    width: 140px;
-}
-
-.footer hr{
-    border: none;
-    background: #b5b5b5;
-    height: 1px;
-    margin: 20px 0;
-}
-
-.copyright{
-    text-align: center;
-}
-
-.menu-icon{
-    width: 28px;
-    display: none;
+.footer-row p{
+    font-weight: bold;
+    margin-right: 40px;
 }
 
 /* ----------------media query for menu--------------- */
@@ -363,9 +302,26 @@ ul{
     }
 
     .menu-icon{
+        font-size: 20px;
         display: block;
         cursor: pointer;
     }
+
+    .logo-toggle{
+        position: relative;
+    }
+
+    .logo{
+        position: absolute;
+        left: 65%;
+    }
+}
+
+
+@media(min-width:800px){
+    .sidebar-sidebar{
+    display: none;
+}
 }
 
 /* --------------media query for less than 600 screen size--------------- */
@@ -377,6 +333,15 @@ ul{
 .col-2, .col-3, .col-4{
     flex-basis: 100%;
 }
+
+.footer-col-1{
+    flex-direction: column;
+}
+
+.footer-row p{
+    margin-right: 0px;
+}
+
 }
 
 
